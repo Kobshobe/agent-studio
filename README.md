@@ -38,6 +38,8 @@ cd my-new-project && git init
 | `Makefile` | 一条命令跑完所有检查 |
 | `.config/wt.toml` | worktrunk 配置（每个 worktree 一个端口） |
 
+`.agents/skills/` 里除 `product-marketing` 外都是流程技能，任何项目都用得上；`product-marketing` 是营销专用（生成并维护 `.agents/product-marketing.md`），不需要就删掉。
+
 ## 为什么是这几个东西
 
 - **契约单独成目录**：两端唯一的耦合点，必须能被机器检查。
