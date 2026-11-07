@@ -4,7 +4,7 @@
 
 ## 路由
 
-- **接手工作先读**：[`docs/handoff.md`](docs/handoff.md)
+- 当前任务：看 `.changes/` 里有没有进行中的链；没有就是空闲，等一个任务
 - 架构与模块边界：[`docs/architecture.md`](docs/architecture.md)
 - 目录地图：[`docs/layout.md`](docs/layout.md)
 - 工作循环与环境：[`docs/workflow.md`](docs/workflow.md)

@@ -4,6 +4,8 @@
 
 它不是代码模板，不假设语言和框架。它规定的是「什么东西放在哪、谁读什么、什么算做完」。
 
+骨架里不含任务书——第一个任务来了才建 `.changes/<slug>/`，用那里的 `intent.md` 说清楚要做什么。
+
 ## 怎么用
 
 ```sh
@@ -11,13 +13,12 @@ cp -R agent-project-template my-new-project
 cd my-new-project && git init
 ```
 
-然后五步：
+然后四步：
 
 1. **填 `AGENTS.md` 的「项目约定」段**——项目名、构建测试命令、目录布局、语言与框架。
 2. **填 `docs/architecture.md`**——组件、依赖方向、扩展点。这决定代理能不能理解代码边界。
 3. **改 `docs/layout.md`**——你的目录归谁。
 4. **换 `contract/openapi.yaml`**——当前只有健康检查，换成你的接口；同时更新 `contract/baseline/`。
-5. **改 `docs/handoff.md`**——写下第一个任务，删掉模板说明。
 
 改完跑 `make check`，全绿即可开工。
 
@@ -26,7 +27,6 @@ cd my-new-project && git init
 | 路径 | 作用 |
 |---|---|
 | `AGENTS.md` | 常驻规则。每个会话自动加载，只放「每次都该知道」的 |
-| `docs/handoff.md` | 交接说明。接手的人从这里知道要做什么 |
 | `docs/architecture.md` | 当前架构：组件、依赖方向、扩展点 |
 | `docs/layout.md` | 目录地图：谁拥有哪个目录 |
 | `docs/workflow.md` | 工作循环、门禁、环境故障排查 |
